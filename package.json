@@ -1,0 +1,35 @@
+{
+  "name": "ui5template",
+  "version": "0.0.1",
+  "private": true,
+  "sapux": true,
+  "description": "UI5 Template",
+  "engines": {
+    "node": ">=10.X"
+  },
+  "scripts": {
+    "start": "ui5 serve --open test/flpSandbox.html?siagro-filial=0101/#masterDetail-display --",
+    "build": "ui5 build --clean-dest --include-task=generateManifestBundle generateCachebusterInfo"
+  },
+  "dependencies": {
+    "shx": "^0.3.2"
+  },
+  "devDependencies": {
+    "@sapui5/ts-types": "^1.77.2",
+    "@ui5/cli": "^2.2.6",
+    "eslint": "^6.8.0",
+    "karma": "^4.4.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.1",
+    "karma-ui5": "^1.1.0",
+    "npm-run-all": "^4.1.5",
+    "ui5-middleware-livereload": "^0.1.7",
+    "ui5-middleware-proxy-basicauth": "^0.0.6"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-livereload",
+      "ui5-middleware-proxy-basicauth"
+    ]
+  }
+}
